@@ -1,0 +1,91 @@
+
+header, footer {
+  width: 100%;
+  background-color: #201C3F;
+  color: #c0c8ee;
+  padding: 20px;
+  clear: both;
+  text-align: center;
+  font-size: 55px;
+}
+
+nav {
+  ul{
+    margin: 20px 0 20px 0px;
+    padding: 20;
+    text-align: center;
+    &> button {
+      display: inline-block;
+      margin: 5px;
+      padding: 20px;
+      color: black;
+      font-weight: bold;
+      background-color: #f8f9fd;
+      border-radius: 2px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+      transition: background-color 0.5s ease;
+      &:hover {
+        background-color: #c0c8ee;
+
+        a {
+          text-decoration: none;
+          padding: 5px;
+
+        }
+      }
+    }
+  }
+}
+.wrapper{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+article {
+  margin: 30px 25px;
+  padding: 15px;
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  border-width: thick;
+  border-style: solid;
+  border-color: gray;
+  background-color: #f8f9fd;
+  border-radius: 2px;
+  h1 {
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 auto;
+  }
+  h3 {
+    text-align: center;
+    padding-top: 10px;
+    margin: 0 auto;
+  }
+  img {
+    width: 100%;
+    min-height: 200px;
+  }
+}
+
+
+section {
+  display: none;
+}
+.active-section {
+  display: inline-block;
+  width: 85%;
+  padding: 0 auto;
+  margin-top: 20px 0px 20px 0px;
+}
+
+aside {
+  width: 14%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.clearfix {
+  clear: both;
+}

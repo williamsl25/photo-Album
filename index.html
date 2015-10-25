@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/html" id="albumTmpl">
+    <article class="album" data-index="">
+      <img src="<%= photo1 %>">
+      <h1><%= name %></h1>
+      <h3>Cover Photo By: <%= photo_by %></h3>
+    </article>
+    </script>
+    <!-- <script type="text/html" id="pictureTmpl">
+    <article class="picture" data-index="">
+      <img src="<%= photo %>">
+      <h2><%= name %></h2>
+      <p>Description: <%= description %></p>
+    </article>
+    </script> -->
+  </head>
+  <body>
+
+  <header >
+    <div>Picture Albums</div>
+  </header>
+
+  <div class="wrapper">
+  <aside>
+    <nav>
+      <ul>
+        <button class="homeNav"><a href="" rel="allAlbums">All Albums</a></li></button>
+        <button class="album1"><a href="" rel="album1">Album 1</a></li></button>
+        <button class="album2"><a href="" rel="album2">Album 2</a></li></button>
+        <button class="album3"><a href="" rel="album3">Album 3</a></li></button>
+        <button class="album4"><a href="" rel="album4">Album 4</a></li></button>
+        <button class="album5"><a href="" rel="album5">Album 5</a></li></button>
+        <button class="album6"><a href="" rel="album6">Album 6</a></li></button>
+      </ul>
+    </nav>
+  </aside>
+
+  <section class="allAlbums active-section">
+  </section>
+
+  <section class="picture1 active-section">
+
+  </section>
+
+
+  </div>
+  <!-- <footer>
+
+  </footer> -->
+<!-- lib files -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+
+<!-- app files -->
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  </body>
+</html>

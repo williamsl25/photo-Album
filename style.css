@@ -55,6 +55,16 @@ article {
     width: 100%;
     min-height: 200px; }
 
+.container {
+  width: 100%;
+  display: inline-block;
+  margin: 42px 20px; }
+  .container img {
+    width: 30%; }
+
+.hidden {
+  display: none; }
+
 section {
   display: none; }
 

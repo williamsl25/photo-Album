@@ -13,13 +13,14 @@
       <h3>Cover Photo By: <%= photo_by %></h3>
     </article>
     </script>
-    <!-- <script type="text/html" id="pictureTmpl">
-    <article class="picture" data-index="">
-      <img src="<%= photo %>">
-      <h2><%= name %></h2>
-      <p>Description: <%= description %></p>
-    </article>
-    </script> -->
+    <script type="text/html" id="pictureTmpl">
+    <div class="container">
+      <img src="<%= photo1 %>">
+      <img src="<%= photo2 %>">
+      <img src="<%= photo3 %>">
+
+    </div>
+    </script>
   </head>
   <body>
 
@@ -31,7 +32,7 @@
   <aside>
     <nav>
       <ul>
-        <button class="homeNav"><a href="" rel="allAlbums">All Albums</a></li></button>
+        
         <button class="album1"><a href="" rel="album1">Album 1</a></li></button>
         <button class="album2"><a href="" rel="album2">Album 2</a></li></button>
         <button class="album3"><a href="" rel="album3">Album 3</a></li></button>
@@ -42,10 +43,10 @@
     </nav>
   </aside>
 
-  <section class="allAlbums active-section">
+  <section class="allAlbums active-section ">
   </section>
 
-  <section class="picture1 active-section">
+  <section class="picture1 active-section ">
 
   </section>
 

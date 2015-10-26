@@ -68,6 +68,17 @@ article {
   }
 }
 
+.container {
+  width: 100%;
+  display: inline-block;
+  margin: 42px 20px;
+  img {
+    width: 30%;
+  }
+}
+.hidden {
+  display: none;
+}
 
 section {
   display: none;

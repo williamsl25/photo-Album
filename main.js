@@ -2,6 +2,7 @@
 $(document).ready(function(){
 // code inside is DOM ready
 
+// --------------all albums view---------------------------------
 var albumTemplate = _.template($('#albumTmpl').html());
  console.log("albumTemplate: ", albumTemplate);
   var albumHTML = "";
@@ -13,41 +14,31 @@ var albumTemplate = _.template($('#albumTmpl').html());
   console.log(albumHTML);
   $('.allAlbums').html(albumHTML);
 
-// picture js
+// --------------make it look like multiple pages-----------------
+// when you click the button in the sidebar
+$('nav button').on('click', function(event) {
+    event.preventDefault();
 
+      var clickedSection = "." + $(this).find('a').attr('rel');
+      var correctAlbum = albumData.filter(function(currItem){
+        return currItem.name === clickedSection.split(".")[1];
+      });
+      var photoBy = correctAlbum[0].photo_by;
+      // correctAlbum is already returned, so now to access a different attribute, you just need to put correctAlbum[0] which is the entire object and .photo_by
 
-//
-// // make it look like multiple pages
-// $('homeNav').click(function(event){
-//   event.preventDefault();
-//   $('allAlbums').css('display', 'inline-block');
-//   $('allAlbums').siblings('section').css('display', 'none');
-// });
-//   $('album1').click(function(event){
-//     event.preventDefault();
-//     $('album1').css('display', 'inline-block');
-//     $('album1').siblings('section').css('display', 'none');
-//   });
-//   $('album2').click(function(event){
-//     event.preventDefault();
-//     $('album2').css('display', 'inline-block');
-//     $('album2').siblings('section').css('display', 'none');
-//   });
-//   $('album3').click(function(event){
-//     event.preventDefault();
-//     $('album3').css('display', 'inline-block');
-//     $('album3').siblings('section').css('display', 'none');
-//   });
-//
-// $('nav button a').on('click', function(event) {
-//     event.preventDefault();
-//
-//       var clickedSection = "." + $(this).attr('rel');
-//       console.log(clickedSection);
-//       $(clickedSection).addClass('active-section');
-//       $(clickedSection).siblings('section').removeClass('active-section');
-//     });
+      console.log(correctAlbum[0]);
+      var pictureTemplate = _.template($('#pictureTmpl').html());
+      var pictureHTML = "";
 
+// we need to merge our data from pictureData with actual markup so that we can add to our html document
+      pictureHTML += pictureTemplate(correctAlbum[0]);
+      $('.picture1').html(pictureHTML);
+      $(clickedSection).addClass('active-section');
+      $('.allAlbums').removeClass('active-section');
+      // $('nav').addClass('hidden');
+      $('header').html(photoBy);
+
+    });
 
 
 });

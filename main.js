@@ -30,15 +30,16 @@ $('nav button').on('click', function(event) {
       var pictureTemplate = _.template($('#pictureTmpl').html());
       var pictureHTML = "";
 
-// we need to merge our data from pictureData with actual markup so that we can add to our html document
+      // we need to merge our data from pictureData with actual markup so that we can add to our html document
       pictureHTML += pictureTemplate(correctAlbum[0]);
       $('.picture1').html(pictureHTML);
       $(clickedSection).addClass('active-section');
       $('.allAlbums').removeClass('active-section');
-      // $('nav').addClass('hidden');
+      // $('.allAlbums').toggle('active-section');
+// can't figure out how to get clicked images to be hidden when I toggle - it shows all albums and the images inside the clicked button
+// can't figure out how to go back to displaying all albums
       $('header').html(photoBy);
 
     });
-
 
 });

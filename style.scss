@@ -36,6 +36,21 @@ nav {
     }
   }
 }
+.home {
+  display: inline-block;
+  margin: 5px;
+  padding: 22px 31px 20px;
+  color: black;
+  font-weight: bold;
+  background-color: #f8f9fd;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+  transition: background-color 0.5s ease;
+  border: 2px outset buttonface;
+  &:hover {
+    background-color: #c0c8ee;
+  }
+}
 .wrapper{
   position: relative;
   width: 100%;

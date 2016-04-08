@@ -2,7 +2,7 @@
 $(document).ready(function(){
 // code inside is DOM ready
 
-// --------------all albums view---------------------------------
+// *** all albums view ***
 var albumTemplate = _.template($('#albumTmpl').html());
  console.log("albumTemplate: ", albumTemplate);
   var albumHTML = "";
@@ -14,7 +14,7 @@ var albumTemplate = _.template($('#albumTmpl').html());
   console.log(albumHTML);
   $('.allAlbums').html(albumHTML);
 
-  // ___________button to return to default home page_________
+  // button to return to default home page
   $('nav').on('click', '.home', function(event) {
       event.preventDefault();
       console.log(this);
@@ -31,7 +31,7 @@ var albumTemplate = _.template($('#albumTmpl').html());
       $('.picture1').removeClass('active-section');
     });
 
-// --------------make it look like multiple pages-----------------
+// *** make it look like multiple pages ***
 // when you click the button in the sidebar
 $('nav').on('click', 'button', function(event) {
     event.preventDefault();
@@ -58,7 +58,7 @@ $('nav').on('click', 'button', function(event) {
       $('header').html(photoBy);
 
     });
-// ________click on image of album___________________
+// *** click on image of album ***
     $('.allAlbums').on('click', '.album', function(event) {
         event.preventDefault();
           var clickedSection= $(this).children('h1').text();
